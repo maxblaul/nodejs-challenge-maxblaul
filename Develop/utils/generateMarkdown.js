@@ -64,18 +64,25 @@ function generateMarkdown(data) {
  ## Description 
   ${data.description}
 
- ## Installation
+
+
+  ## Installation
   ${data.installation}
 
- ## Usage 
+ 
+ 
+ 
+  ## Usage 
   ${data.usage}
 
   ${renderLicenseSection(data.license)}
 
- ## Contributing
+ 
+  ## Contributing
   ${data.contributing}
 
- ## Tests 
+ 
+  ## Tests 
   ${data.tests}
  
  ## Questions
