@@ -54,5 +54,5 @@
 
  ## Repository Link
 
- https://github.com/nodejs-challenge-maxblaul
+https://github.com/maxblaul/nodejs-challenge-maxblaul
 
