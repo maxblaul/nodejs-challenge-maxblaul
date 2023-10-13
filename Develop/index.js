@@ -10,13 +10,23 @@ const { log } = require('console');
 const questions = [
     {
         type: 'input',
+        message: 'What is your name?',
+        name: 'myname',
+    },
+    {
+        type: 'input',
         message: 'What is your Github Username?',
         name: 'username',
     },
     {
         type: 'input',
+        name: 'email',
+        message: 'Enter your email address:',
+    },    
+    {
+        type: 'input',
         message: 'What is the name of this Github repository?',
-        name: 'repo-name',
+        name: 'repo',
     },
     {
         type: 'input',
@@ -26,7 +36,7 @@ const questions = [
     {
         type: 'input',
         message: 'Provide an assignment description.',
-        name: 'assignment-description',
+        name: 'description',
     },
     {
         type: 'input',
@@ -51,27 +61,13 @@ const questions = [
     {
         type: 'checkbox',
         message: 'Please select a license.',
-        choices: ['MIT License', 'Apache License 2.0', 'Mozilla Public License 2.0', 'Creative Commons Zero v1.0 Universal', 'The Unlicense' ],
-        name: 'license'
+        choices: ['MIT License', 'Apache License 2.0', 'Mozilla Public License 2.0', 'Creative Commons Zero v1.0 Universal'],
+        name: 'license',
     }
 
 
 ];
 
-// TODO: Create a function to write README file
-// const writeToFile = data => {
-//     return new Promise((resolve, reject)) => {
-//         fs.writeFile('./utils/README.md', data, err => {
-//         if (err) {
-//             return console.log(err);
-//     }
-    
-//         }
-
-//         console.log('Good job! You just made a README.md file')
-//     });
-
-// }
 function writeToFile(fileName, data){
     return fs.writeFileSync(path.join(process.cwd(), fileName), data)
 }
